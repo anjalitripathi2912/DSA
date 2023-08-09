@@ -1,0 +1,38 @@
+Problem Link - https://practice.geeksforgeeks.org/problems/reverse-a-string/1
+
+
+Solution - 
+
+class Solution
+{
+    public:
+    string reverseWord(string str)
+    {
+       
+       int i = 0;
+       int j =  str.length()-1;
+       for(int i=0;i<j;i++,j--)
+       {
+           char temp = str[i];
+           str[i]= str[j];
+           str[j] = temp;
+       }
+       return str;
+    }
+};
+
+
+int main() {
+	
+	int t;
+	cin>>t;
+	while(t--)
+	{
+    	string s;
+    	cin >> s;
+    	Solution ob;
+    	cout << ob.reverseWord(s) << endl;
+	}
+	return 0;
+	
+}
